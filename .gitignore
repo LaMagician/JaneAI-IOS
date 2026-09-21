@@ -53,3 +53,13 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# JaneAI-IOS generated build products and downloaded kernel source
+/kernel/linux-6.12/
+/kernel/build/
+/rootfs/*
+!/rootfs/.gitkeep
+/build/*.cpio.gz
+/build/*.log
+/build/*.pid
+/build/qemu-serial.log
