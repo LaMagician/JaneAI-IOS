@@ -15,13 +15,17 @@ JANE_STATE_DIR="$TEST_ROOT/state"; export JANE_STATE_DIR
 JANE_MEMORY_FILE="$JANE_STATE_DIR/memory/facts.tsv"; export JANE_MEMORY_FILE
 JANE_AUDIT_FILE="$JANE_STATE_DIR/memory/audit.log"; export JANE_AUDIT_FILE
 mkdir -p "$JANE_STATE_DIR/memory" "$JANE_STATE_DIR/config"
-printf 'remember color blue\nrecall color\nwrite /root/test secret\nn\nsettings hostname jane-test\ny\naudit\nexit\n' \
+printf 'remember color blue\nremember color red\nrecall color\nforget color\nrecall color\nwrite /root/test secret\nn\nsettings hostname jane-test\ny\nnetwork https://example.com\naudit\nexit\n' \
   | "$TEST_ROOT/jane/jane" > "$TEST_ROOT/output.log"
 grep -q 'RESULT: remembered color' "$TEST_ROOT/output.log" || fail 'remember command failed'
-grep -q 'RESULT: blue' "$TEST_ROOT/output.log" || fail 'recall command failed'
+grep -q 'RESULT: red' "$TEST_ROOT/output.log" || fail 'memory update failed'
+grep -q 'RESULT: forgot color' "$TEST_ROOT/output.log" || fail 'forget command failed'
+grep -q 'RESULT: no memory for that key' "$TEST_ROOT/output.log" || fail 'post-forget recall did not fail cleanly'
 grep -q 'PERMISSION: denied by user for write_file /root/test' "$TEST_ROOT/output.log" || fail 'confirm deny path failed'
 grep -q 'PERMISSION: allow change_setting hostname' "$TEST_ROOT/output.log" || fail 'confirm allow path failed'
+grep -q 'PERMISSION: deny network_request https://example.com' "$TEST_ROOT/output.log" || fail 'external network deny missing'
 grep -q 'confirm_deny' "$JANE_AUDIT_FILE" || fail 'audit missing confirm_deny'
 grep -q 'confirm_allow' "$JANE_AUDIT_FILE" || fail 'audit missing confirm_allow'
+grep -q 'execute_success' "$JANE_AUDIT_FILE" || fail 'audit missing execute_success'
 grep -q '^hostname=jane-test$' "$JANE_STATE_DIR/config/settings.conf" || fail 'hostname setting persistence failed'
 echo 'PASS: Jane daemon integration test'

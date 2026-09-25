@@ -8,6 +8,7 @@ plan_request() {
         write\ *) rest=${1#write }; path=${rest%% *}; printf 'write_file|%s|%s\n' "$path" "${rest#* }";;
         remember\ *) rest=${1#remember }; key=${rest%% *}; printf 'remember|%s|%s\n' "$key" "${rest#* }";;
         recall\ *) printf 'recall|%s|\n' "${1#recall }";;
+        forget\ *) printf 'forget|%s|\n' "${1#forget }";;
         launch\ *) printf 'launch_program|%s|\n' "${1#launch }";;
         settings\ hostname\ *) printf 'change_setting|hostname|%s\n' "${1#settings hostname }";;
         network\ *) printf 'network_request|%s|\n' "${1#network }";;
