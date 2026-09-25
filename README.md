@@ -11,7 +11,7 @@ JaneAI-IOS is an experimental AI-native Linux prototype. It boots Linux 6.12.66 
 
 The first build downloads the pinned kernel from kernel.org. Required commands are `gcc`, `make`, `curl`, `xz`, `cpio`, `gzip`, static `busybox`, and `qemu-system-x86_64`. CMake and Python are not required.
 
-At `jane>` try `help`, `status`, `read /etc/hostname`, `write /tmp/note hello`, `remember color blue`, `recall color`, `processes`, and `exit`.
+At `jane>` try `help`, `status`, `read /etc/hostname`, `write /tmp/note hello`, `remember color blue`, `recall color`, `audit`, `processes`, and `exit`.
 
 ## Architecture
 
@@ -20,7 +20,7 @@ Linux 6.12.66 -> initramfs /init -> Jane terminal
                                    -> understand -> planner -> permission -> tool -> result -> memory
 ```
 
-Jane uses small POSIX-shell modules. The planner emits `action|target|argument`; the daemon checks that plan against the permission layer before a tool executes. Reads, writes, launches, settings, and networking are policy controlled.
+Jane uses small POSIX-shell modules. The planner emits `action|target|argument`; the daemon checks that plan against the permission layer before a tool executes. Reads, writes, launches, settings, and networking are policy controlled, with allow/deny/confirmation outcomes and an append-only audit log at `/jane/memory/audit.log`.
 
 ## Layout
 

@@ -8,8 +8,12 @@ permission_check read_file /etc/hostname || fail 'safe read denied'
 ! permission_check read_file /etc/shadow || fail 'sensitive read allowed'
 permission_check write_file /tmp/example || fail 'safe write denied'
 ! permission_check write_file /etc/hostname || fail 'system write allowed'
+[ "$(permission_decide launch_program /bin/echo)" = 'confirm' ] || fail 'launch should require confirmation'
+[ "$(permission_decide write_file /root/example)" = 'confirm' ] || fail 'root write should require confirmation'
+[ "$(permission_decide change_setting hostname)" = 'confirm' ] || fail 'hostname setting should require confirmation'
 [ "$(plan_request 'read /etc/hostname')" = 'read_file|/etc/hostname|' ] || fail 'read plan invalid'
 [ "$(plan_request 'processes')" = 'get_processes||' ] || fail 'process plan invalid'
+[ "$(plan_request 'audit')" = 'audit||' ] || fail 'audit plan invalid'
 JANE_MEMORY_FILE=$(mktemp); export JANE_MEMORY_FILE
 . "$REPO_ROOT/ai/memory/memory.sh"
 memory_remember color blue

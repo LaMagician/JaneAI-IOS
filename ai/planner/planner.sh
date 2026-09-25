@@ -2,7 +2,7 @@
 # Emits an intentionally small structured plan: action|target|argument.
 plan_request() {
     case "$1" in
-        help|status|exit|memory) printf '%s||\n' "$1";;
+        help|status|exit|memory|audit) printf '%s||\n' "$1";;
         processes) printf 'get_processes||\n';;
         read\ *) printf 'read_file|%s|\n' "${1#read }";;
         write\ *) rest=${1#write }; path=${rest%% *}; printf 'write_file|%s|%s\n' "$path" "${rest#* }";;
