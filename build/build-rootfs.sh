@@ -7,6 +7,7 @@ for command in busybox cpio gzip; do command -v "$command" >/dev/null || { echo 
 mkdir -p "$ROOTFS" "$REPO_ROOT/build"
 for name in bin sbin etc proc sys dev tmp root usr var jane; do rm -rf "$ROOTFS/$name"; done
 mkdir -p "$ROOTFS/bin" "$ROOTFS/sbin" "$ROOTFS/etc" "$ROOTFS/proc" "$ROOTFS/sys" "$ROOTFS/dev" "$ROOTFS/tmp" "$ROOTFS/root" "$ROOTFS/usr/bin" "$ROOTFS/var" "$ROOTFS/jane/lib" "$ROOTFS/jane/memory"
+mkdir -p "$ROOTFS/jane/config" "$ROOTFS/jane/state"
 install -m 0755 "$(command -v busybox)" "$ROOTFS/bin/busybox"
 for applet in $("$ROOTFS/bin/busybox" --list); do
   [ "$applet" = busybox ] || ln -sf busybox "$ROOTFS/bin/$applet"

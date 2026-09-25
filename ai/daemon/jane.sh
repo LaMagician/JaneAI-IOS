@@ -5,7 +5,8 @@ JANE_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 . "$JANE_DIR/lib/tools.sh"
 . "$JANE_DIR/lib/memory.sh"
 . "$JANE_DIR/lib/planner.sh"
-JANE_AUDIT_FILE=${JANE_AUDIT_FILE:-/jane/memory/audit.log}
+JANE_STATE_DIR=${JANE_STATE_DIR:-/jane}
+JANE_AUDIT_FILE=${JANE_AUDIT_FILE:-$JANE_STATE_DIR/memory/audit.log}
 audit_log() {
     timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || printf 'unknown')
     mkdir -p "$(dirname "$JANE_AUDIT_FILE")"
@@ -27,7 +28,7 @@ EOF
     audit_log "$request" "$action" "$target" plan
     case "$action" in
       help) echo 'Commands: help status remember KEY VALUE recall KEY memory audit processes read PATH write PATH TEXT launch PROGRAM settings hostname NAME network URL exit';;
-      status) echo 'Jane v0.1: deterministic backend; permission boundary active; network denied.';;
+      status) echo "Jane v0.1: deterministic backend; permission boundary active; state_dir=$JANE_STATE_DIR";;
       exit) return 10;;
       remember) memory_remember "$target" "$argument"; echo "RESULT: remembered $target";;
       recall) if result=$(memory_recall "$target"); then echo "RESULT: $result"; else echo 'RESULT: no memory for that key'; fi;;
@@ -83,4 +84,6 @@ while :; do
   [ "$rc" -eq 10 ] && break
 done
 echo 'Jane stopped. Starting recovery shell.'
-exec sh
+if [ -t 0 ]; then
+  exec sh
+fi

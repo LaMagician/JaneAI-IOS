@@ -4,7 +4,7 @@ is_safe_read_path() {
     case "$1" in /etc/hostname|/proc/*|/jane/*|/tmp/*|/root/*) return 0;; *) return 1;; esac
 }
 is_safe_write_path() {
-    case "$1" in /tmp/*|/jane/memory/*|/root/*) return 0;; *) return 1;; esac
+    case "$1" in /tmp/*|/jane/memory/*|/jane/config/*|/jane/state/memory/*|/jane/state/config/*|/root/*) return 0;; *) return 1;; esac
 }
 is_safe_program() {
     case "$1" in /bin/echo|/bin/date|/bin/ls|echo|date|ls) return 0;; *) return 1;; esac
@@ -30,7 +30,10 @@ permission_decide() {
             printf 'allow\n'
             ;;
         network_request)
-            printf 'deny\n'
+            case "$target" in
+                http://127.0.0.1/*|http://localhost/*|https://127.0.0.1/*|https://localhost/*) printf 'confirm\n';;
+                *) printf 'deny\n';;
+            esac
             ;;
         change_setting)
             [ "$target" = hostname ] && printf 'confirm\n' || printf 'deny\n'

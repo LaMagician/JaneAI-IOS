@@ -9,7 +9,7 @@ JaneAI-IOS is an experimental AI-native Linux prototype. It boots Linux 6.12.66 
 ./build/run-qemu.sh
 ```
 
-The first build downloads the pinned kernel from kernel.org. Required commands are `gcc`, `make`, `curl`, `xz`, `cpio`, `gzip`, static `busybox`, and `qemu-system-x86_64`. CMake and Python are not required.
+The first build downloads the pinned kernel from kernel.org, with automatic fallback to the GitHub Linux stable mirror when kernel.org is unreachable. Required commands are `gcc`, `make`, `curl`, `xz`, `cpio`, `gzip`, and static `busybox`; kernel build headers require `libelf-dev`. `qemu-system-x86_64` is required for runtime boot testing.
 
 At `jane>` try `help`, `status`, `read /etc/hostname`, `write /tmp/note hello`, `remember color blue`, `recall color`, `audit`, `processes`, and `exit`.
 
@@ -20,7 +20,7 @@ Linux 6.12.66 -> initramfs /init -> Jane terminal
                                    -> understand -> planner -> permission -> tool -> result -> memory
 ```
 
-Jane uses small POSIX-shell modules. The planner emits `action|target|argument`; the daemon checks that plan against the permission layer before a tool executes. Reads, writes, launches, settings, and networking are policy controlled, with allow/deny/confirmation outcomes and an append-only audit log at `/jane/memory/audit.log`.
+Jane uses small POSIX-shell modules. The planner emits `action|target|argument`; the daemon checks that plan against the permission layer before a tool executes. Reads, writes, launches, settings, and networking are policy controlled, with allow/deny/confirmation outcomes and an append-only audit log. When QEMU starts with the provided 9p share, state is persisted in `/jane/state` across boots.
 
 ## Layout
 
@@ -34,4 +34,4 @@ Jane uses small POSIX-shell modules. The planner emits `action|target|argument`;
 
 ## Limitations and roadmap
 
-The daemon is deterministic, storage is initramfs-only, networking is denied, and QEMU is serial-only. Future work adds durable storage, confirmations, backend adapters, audit logs, GUI, and voice support. See `docs/` for build, architecture, kernel, and security details.
+The daemon is deterministic and QEMU is serial-only. External network access remains denied by default policy; localhost requests require confirmation. State persistence currently depends on the QEMU 9p state mount provided by `build/run-qemu.sh`. Future work adds richer backend adapters, stronger policy controls, GUI, and voice support. See `docs/` for build, architecture, kernel, and security details.

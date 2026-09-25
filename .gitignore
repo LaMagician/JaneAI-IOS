@@ -59,6 +59,7 @@ dkms.conf
 /kernel/linux-6.12.*/
 /kernel/build/
 /kernel/linux-*.tar.xz
+/kernel/linux-*.tar.gz
 /rootfs/*
 !/rootfs/.gitkeep
 /build/*.cpio.gz
