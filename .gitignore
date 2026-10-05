@@ -70,4 +70,3 @@ __pycache__/
 /build/*.pid
 /build/release/
 /build/qemu-serial.log
-*.onnx
