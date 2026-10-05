@@ -1,0 +1,5 @@
+# profile\tmemory_target\tmode\tcontext_tokens\tvoice_mode
+LOW\t4-8GB\tCPU quantized model\t2048-4096\tPUSH_TO_TALK
+BALANCED\t8-16GB\tCPU/GPU quantized model\t8192\tON_DEMAND
+HIGH\t16GB+\tlarger local model\t16384\tON_DEMAND
+CLOUD\tany\tremote model API\tprovider\tON_DEMAND

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION boot sequence</title>
+  <desc id="desc">Animated operating-system boot visual: energy point, logo formation, scanning rings, initialization text, and interface activation.</desc>
+  <defs>
+    <radialGradient id="energy" cx="50%" cy="46%" r="48%">
+      <stop offset="0" stop-color="#f4ffff"/>
+      <stop offset=".16" stop-color="#67f8ff"/>
+      <stop offset=".45" stop-color="#118dff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#020408" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="480" y1="120" x2="1120" y2="780" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#83fbff"/>
+      <stop offset=".5" stop-color="#168dff"/>
+      <stop offset="1" stop-color="#6a70ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#020408"/>
+  <circle cx="800" cy="420" r="40" fill="url(#energy)">
+    <animate attributeName="r" values="3;90;260;210" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".2;1;.82;.35" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <g transform="translate(800 420)" fill="none" stroke="url(#line)" stroke-linecap="round">
+    <circle r="250" stroke-width="3" stroke-dasharray="120 42 16 38">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="196" stroke-width="8" stroke-dasharray="78 38">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M-370 0h128M242 0h370M0-320v96M0 220v210" stroke-width="2" opacity=".55"/>
+  </g>
+  <g transform="translate(800 408)" fill="none" stroke="#f0fdff" stroke-linecap="round" opacity=".92">
+    <path d="M32-130v205c0 43-31 73-79 73-43 0-73-23-91-56" stroke-width="15"/>
+    <path d="M32-130c-52 6-85 36-100 83-9 31-6 61 9 86" stroke="#4ff3ff" stroke-width="7"/>
+    <circle cx="-8" cy="-58" r="8" fill="#6af8ff" stroke="none"/>
+  </g>
+  <text x="800" y="702" text-anchor="middle" fill="#f5fbff" font-family="Orbitron, Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="10">JANE ION</text>
+  <g fill="#8fb0c2" font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="20" letter-spacing="4">
+    <text x="800" y="760" text-anchor="middle">INITIALIZING JANE ION</text>
+    <text x="800" y="792" text-anchor="middle">LOADING COGNITIVE CORE  /  CONNECTING MEMORY  /  ACTION SYSTEM ONLINE</text>
+  </g>
+  <rect x="552" y="815" width="496" height="2" fill="#143146"/>
+  <rect x="552" y="815" width="372" height="2" fill="#57f1ff">
+    <animate attributeName="width" values="0;496;496" dur="8s" repeatCount="indefinite"/>
+  </rect>
+</svg>

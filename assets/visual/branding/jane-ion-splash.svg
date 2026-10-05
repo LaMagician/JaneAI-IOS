@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION splash screen</title>
+  <desc id="desc">Cinematic dark startup screen with blue AI core, brand mark, neural grid, and JANE ION wordmark.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#0a2534"/>
+      <stop offset=".4" stop-color="#07111b"/>
+      <stop offset="1" stop-color="#020408"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="47%" r="45%">
+      <stop offset="0" stop-color="#5af6ff" stop-opacity=".72"/>
+      <stop offset=".28" stop-color="#118dff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="620" y1="180" x2="1280" y2="840" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5cf9ff"/>
+      <stop offset=".55" stop-color="#198fff"/>
+      <stop offset="1" stop-color="#6870ff"/>
+    </linearGradient>
+    <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="960" cy="470" r="410" fill="url(#glow)"/>
+  <g opacity=".24" stroke="#31cfff" stroke-width="1" fill="none">
+    <path d="M0 734C344 628 594 616 828 696c262 89 582 47 1092-133"/>
+    <path d="M0 305c334 96 633 85 897-34 273-122 614-121 1023 6"/>
+    <path d="M243 163h1434M201 906h1518M960 80v922"/>
+  </g>
+  <g transform="translate(960 442)" fill="none" stroke="url(#ring)" stroke-linecap="round">
+    <circle r="240" stroke-width="3" opacity=".65"/>
+    <circle r="190" stroke-width="7" stroke-dasharray="90 46 16 36"/>
+    <circle r="128" stroke-width="2" stroke-dasharray="8 18"/>
+    <path d="M-320 0h120M200 0h320M0-320v120M0 200v320" stroke-width="2" opacity=".52"/>
+  </g>
+  <g transform="translate(960 433)" fill="none" stroke="#eafcff" stroke-width="15" stroke-linecap="round">
+    <path d="M34-148v224c0 47-34 80-86 80-47 0-80-25-100-61"/>
+    <path d="M34-148c-56 7-93 40-109 91-10 33-7 66 10 93" stroke="#42f0ff" stroke-width="7"/>
+    <circle cx="-10" cy="-68" r="8" fill="#68f7ff" stroke="none"/>
+  </g>
+  <text x="960" y="778" text-anchor="middle" fill="#f6fbff" font-family="Orbitron, Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="12">JANE ION</text>
+  <text x="960" y="835" text-anchor="middle" fill="#8aa6b9" font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="22" letter-spacing="7">INITIALIZING COGNITIVE CORE</text>
+  <rect x="760" y="872" width="400" height="2" fill="#12334a"/>
+  <rect x="760" y="872" width="286" height="2" fill="#40eaff"/>
+</svg>

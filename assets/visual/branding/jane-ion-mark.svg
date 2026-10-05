@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION transparent brand mark</title>
+  <desc id="desc">Transparent J-shaped feminine AI profile mark with metallic silver and electric-blue energy.</desc>
+  <defs>
+    <linearGradient id="metal" x1="96" y1="64" x2="382" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".25" stop-color="#aab7c7"/>
+      <stop offset=".52" stop-color="#f5fbff"/>
+      <stop offset=".78" stop-color="#687687"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="energy" x1="122" y1="80" x2="362" y2="384" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5effff"/>
+      <stop offset=".5" stop-color="#128dff"/>
+      <stop offset="1" stop-color="#5968ff"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .08 0 0 0 0 .7 0 0 0 0 1 0 0 0 .82 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="#21cfff" stroke-width="2" opacity=".35">
+    <circle cx="256" cy="256" r="190"/>
+    <circle cx="256" cy="256" r="145" stroke-dasharray="10 22"/>
+    <path d="M70 256h372M256 70v372M124 124l264 264M388 124L124 388"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M283 76c-67 10-111 57-122 123-8 52 4 98 37 136 30 34 74 53 129 55 13 0 23-10 23-23V110c0-22-25-39-67-34z" fill="#071018" fill-opacity=".88" stroke="url(#metal)" stroke-width="7"/>
+    <path d="M326 111v237c0 50-35 86-90 86-50 0-85-27-106-66" stroke="url(#metal)" stroke-linecap="round" stroke-width="32"/>
+    <path d="M326 111c-60 8-99 43-115 98-11 36-7 71 11 100" stroke="url(#energy)" stroke-linecap="round" stroke-width="14"/>
+    <path d="M238 215c33 4 62-5 87-29" stroke="#e9fbff" stroke-linecap="round" stroke-width="8"/>
+    <circle cx="280" cy="197" r="12" fill="#66f7ff"/>
+    <path d="M347 143c45 33 72 78 78 133" stroke="#39d7ff" stroke-width="5" stroke-dasharray="4 16"/>
+  </g>
+</svg>

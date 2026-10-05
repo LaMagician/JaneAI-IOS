@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION scanning and particle effects</title>
+  <desc id="desc">Animated scanning beams, particle trails, data streams, and confirmation pulses for system execution visuals.</desc>
+  <defs>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#50f4ff" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#50f4ff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#50f4ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="#020408"/>
+  <g opacity=".54">
+    <rect x="-260" y="124" width="360" height="4" fill="url(#beam)">
+      <animate attributeName="x" values="-260;1200" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1200" y="342" width="420" height="3" fill="url(#beam)">
+      <animate attributeName="x" values="1200;-420" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-180" y="546" width="300" height="2" fill="url(#beam)">
+      <animate attributeName="x" values="-180;1200" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g stroke="#45eaff" stroke-width="2" fill="none" opacity=".45">
+    <path d="M118 515c126-85 226-101 300-49 78 55 180 45 306-31 128-77 258-78 390-3"/>
+    <path d="M96 208c104 55 199 58 286 8 93-54 203-55 331-5"/>
+  </g>
+  <g fill="#62f6ff">
+    <circle cx="118" cy="515" r="4"/><circle cx="418" cy="466" r="4"/><circle cx="724" cy="435" r="4"/><circle cx="1114" cy="432" r="4"/>
+    <circle cx="96" cy="208" r="3"/><circle cx="382" cy="216" r="3"/><circle cx="713" cy="211" r="3"/>
+  </g>
+  <g transform="translate(610 348)" fill="none" stroke="#58f2ff" stroke-linecap="round">
+    <circle r="78" stroke-width="3">
+      <animate attributeName="r" values="38;118;38" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".8;0;.8" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="132" stroke-width="2" stroke-dasharray="16 18"/>
+    <path d="M-170 0h90M80 0h170M0-170v90M0 80v170" stroke-width="2" opacity=".55"/>
+  </g>
+  <g fill="#9fb6c7" font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="20" letter-spacing="3">
+    <text x="78" y="86">SCAN / DATA STREAM / ACTIVATION PULSE / COMPLETION FIELD</text>
+  </g>
+</svg>

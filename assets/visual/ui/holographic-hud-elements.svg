@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION holographic HUD elements</title>
+  <desc id="desc">Reusable futuristic HUD frames, separators, corners, interface rings, and status capsules in the JANE ION visual language.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72fbff"/>
+      <stop offset=".5" stop-color="#1592ff"/>
+      <stop offset="1" stop-color="#6272ff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="#020408"/>
+  <g fill="none" stroke="url(#blue)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M90 90h280l42 42v126l-42 42H90z" stroke-width="3"/>
+    <path d="M108 108h240M108 282h240M388 150v90" stroke-width="1.5" opacity=".65"/>
+    <path d="M90 430h420l54 54v168l-54 54H90z" stroke-width="3"/>
+    <path d="M118 459h360M118 677h360M536 513v119" stroke-width="1.5" opacity=".65"/>
+    <path d="M696 114h330M696 154h220M696 194h280" stroke-width="4" opacity=".75"/>
+    <path d="M698 312h338l36 36v86l-36 36H698l-36-36v-86z" stroke-width="3"/>
+    <path d="M724 340h284M724 442h284" stroke-width="1.5" opacity=".58"/>
+    <circle cx="872" cy="618" r="110" stroke-width="3" stroke-dasharray="56 24 8 16"/>
+    <circle cx="872" cy="618" r="78" stroke-width="2" stroke-dasharray="8 13"/>
+    <path d="M872 478v62M872 696v62M732 618h62M950 618h62" stroke-width="2"/>
+  </g>
+  <g fill="#53efff" opacity=".58" filter="url(#glow)">
+    <circle cx="90" cy="90" r="4"/><circle cx="370" cy="90" r="4"/><circle cx="412" cy="132" r="4"/>
+    <circle cx="90" cy="300" r="4"/><circle cx="564" cy="484" r="4"/><circle cx="564" cy="652" r="4"/>
+    <circle cx="872" cy="618" r="8"/>
+  </g>
+  <g fill="#9db6c7" font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="18" letter-spacing="3">
+    <text x="108" y="146">JANE ION PANEL</text>
+    <text x="118" y="499">SYSTEM VIEWPORT</text>
+    <text x="724" y="390">ACTION STATE</text>
+    <text x="778" y="625">CORE</text>
+  </g>
+</svg>

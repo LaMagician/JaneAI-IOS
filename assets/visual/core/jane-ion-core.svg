@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION core states</title>
+  <desc id="desc">Animated AI core with idle, listening, thinking, processing, speaking, executing, warning, success, and startup visual state rings.</desc>
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="48%">
+      <stop offset="0" stop-color="#edffff"/>
+      <stop offset=".2" stop-color="#65f7ff"/>
+      <stop offset=".46" stop-color="#168dff"/>
+      <stop offset="1" stop-color="#02080e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="130" y1="100" x2="690" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7dfbff"/>
+      <stop offset=".46" stop-color="#168dff"/>
+      <stop offset="1" stop-color="#6570ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .1 0 0 0 0 .7 0 0 0 0 1 0 0 0 .74 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="#020408"/>
+  <circle cx="400" cy="400" r="190" fill="url(#core)" filter="url(#glow)">
+    <animate attributeName="r" values="176;196;176" dur="5.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".82;1;.82" dur="5.2s" repeatCount="indefinite"/>
+  </circle>
+  <g fill="none" stroke="url(#ring)" stroke-linecap="round" filter="url(#glow)">
+    <circle cx="400" cy="400" r="285" stroke-width="3" stroke-dasharray="36 28">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="34s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="238" stroke-width="7" stroke-dasharray="120 58 18 46">
+      <animateTransform attributeName="transform" type="rotate" from="360 400 400" to="0 400 400" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="140" stroke-width="2" stroke-dasharray="8 18">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M400 105v90M400 605v90M105 400h90M605 400h90" stroke-width="2" opacity=".7"/>
+  </g>
+  <g fill="#78f8ff">
+    <circle cx="400" cy="117" r="5"/>
+    <circle cx="638" cy="278" r="4"/>
+    <circle cx="568" cy="621" r="5"/>
+    <circle cx="240" cy="614" r="4"/>
+    <circle cx="153" cy="310" r="3"/>
+  </g>
+  <g font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#9fb7c9">
+    <text x="400" y="742" text-anchor="middle">IDLE LISTENING THINKING PROCESSING SPEAKING EXECUTING SUCCESS WARNING STARTUP</text>
+  </g>
+</svg>

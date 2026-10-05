@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION AI presence</title>
+  <desc id="desc">Elegant holographic female AI presence emerging from blue light, neural particles, and translucent contour geometry.</desc>
+  <defs>
+    <radialGradient id="aura" cx="50%" cy="32%" r="58%">
+      <stop offset="0" stop-color="#75f8ff" stop-opacity=".62"/>
+      <stop offset=".35" stop-color="#168cff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#010409" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="figure" x1="210" y1="130" x2="690" y2="1020" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fdff" stop-opacity=".94"/>
+      <stop offset=".4" stop-color="#6defff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#1a73ff" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="line" x1="160" y1="190" x2="710" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eefcff"/>
+      <stop offset=".52" stop-color="#41dfff"/>
+      <stop offset="1" stop-color="#536dff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .08 0 0 0 0 .68 0 0 0 0 1 0 0 0 .7 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="#020408"/>
+  <circle cx="450" cy="420" r="390" fill="url(#aura)"/>
+  <g stroke="#1bbfff" stroke-width="1" opacity=".22">
+    <path d="M110 895c125-90 234-112 328-66 96 46 210 15 344-91" fill="none"/>
+    <path d="M116 315c142 72 258 77 348 15 96-65 205-72 329-19" fill="none"/>
+    <path d="M450 84v1042M166 450h568"/>
+  </g>
+  <g fill="none" stroke="url(#line)" filter="url(#softGlow)" stroke-linecap="round">
+    <path d="M462 159c-86 7-148 70-152 162-3 64 25 122 77 158 21 14 25 42 10 62-42 55-83 137-93 235-9 91 58 169 148 169h118" stroke-width="4" opacity=".86"/>
+    <path d="M474 166c104 26 166 113 150 220-8 56-36 100-78 132-22 17-28 47-12 70 45 64 70 142 72 238" stroke-width="4" opacity=".72"/>
+    <path d="M352 343c52 13 101 10 146-10 34-15 66-16 97-4" stroke-width="3" opacity=".68"/>
+    <path d="M356 423c53 18 107 18 164 0" stroke-width="2" opacity=".68"/>
+    <path d="M398 306c30-6 59-5 86 5" stroke-width="2" opacity=".7"/>
+    <path d="M398 500c55 29 111 26 168-10" stroke-width="2" opacity=".52"/>
+    <path d="M330 629c86 40 176 43 269 10" stroke-width="2" stroke-dasharray="8 16" opacity=".5"/>
+    <path d="M310 742c101 46 208 47 322 4" stroke-width="2" stroke-dasharray="12 20" opacity=".42"/>
+  </g>
+  <g fill="url(#figure)" opacity=".33">
+    <path d="M466 168c83 20 133 87 122 171-8 62-46 110-101 136 37 26 74 81 101 166 34 105 46 210 35 315H309c-8-108 7-208 44-300 27-67 62-115 106-145-71-28-113-91-110-167 4-93 55-157 117-176z"/>
+  </g>
+  <g filter="url(#softGlow)">
+    <circle cx="410" cy="350" r="8" fill="#79fbff"/>
+    <circle cx="516" cy="350" r="8" fill="#79fbff"/>
+    <path d="M395 348c41-19 83-19 126 0" fill="none" stroke="#e9fdff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g fill="#50eaff" opacity=".76">
+    <circle cx="188" cy="211" r="3"/>
+    <circle cx="716" cy="253" r="2"/>
+    <circle cx="245" cy="796" r="2"/>
+    <circle cx="702" cy="742" r="3"/>
+    <circle cx="628" cy="561" r="2"/>
+    <circle cx="301" cy="557" r="2"/>
+    <circle cx="433" cy="1002" r="2"/>
+  </g>
+</svg>

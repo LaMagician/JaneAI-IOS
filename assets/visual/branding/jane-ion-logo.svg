@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION official logo</title>
+  <desc id="desc">A metallic J-shaped feminine AI profile with electric blue holographic illumination and the JANE ION wordmark.</desc>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".25" stop-color="#9eaab7"/>
+      <stop offset=".52" stop-color="#eef6ff"/>
+      <stop offset=".8" stop-color="#657180"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38f5ff"/>
+      <stop offset=".45" stop-color="#118dff"/>
+      <stop offset="1" stop-color="#5c6dff"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="42%" cy="46%" r="60%">
+      <stop offset="0" stop-color="#6ff7ff" stop-opacity=".9"/>
+      <stop offset=".34" stop-color="#1594ff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#05080d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.08 0 0 0 0 0.72 0 0 0 0 1 0 0 0 .75 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="360" rx="0" fill="#05080d"/>
+  <circle cx="172" cy="176" r="156" fill="url(#coreGlow)"/>
+  <g opacity=".38" fill="none" stroke="#1cbcff" stroke-width="1">
+    <circle cx="178" cy="176" r="112"/>
+    <circle cx="178" cy="176" r="88" stroke-dasharray="8 18"/>
+    <path d="M44 176h268M178 42v268M82 82l192 192M274 82L82 274"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M196 68c-37 7-62 34-68 72-5 32 2 60 22 83 18 21 45 33 77 34 8 0 14-6 14-14V88c0-13-15-23-45-20z" fill="#08121b" stroke="url(#metal)" stroke-width="4"/>
+    <path d="M226 88v143c0 30-21 52-54 52-30 0-51-16-64-40" fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-width="18"/>
+    <path d="M226 88c-36 5-60 26-70 59-6 21-4 42 7 60" fill="none" stroke="url(#blue)" stroke-linecap="round" stroke-width="8"/>
+    <path d="M172 151c20 3 37-2 52-16" fill="none" stroke="#dff9ff" stroke-linecap="round" stroke-width="4"/>
+    <circle cx="196" cy="139" r="7" fill="#62f4ff"/>
+    <path d="M238 107c27 20 43 47 47 80" fill="none" stroke="#39d7ff" stroke-width="3" stroke-dasharray="3 10"/>
+  </g>
+  <g fill="none" stroke="#3be7ff" stroke-linecap="round" opacity=".72">
+    <path d="M48 280c36-15 68-17 95-5 26 12 57 10 94-7" stroke-width="2"/>
+    <path d="M72 65c26 6 45 16 56 31" stroke-width="1.5"/>
+    <path d="M279 259c-22 7-46 9-72 5" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(382 112)">
+    <text x="0" y="76" fill="#f8fbff" font-family="Orbitron, Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="74" font-weight="700" letter-spacing="7">JANE ION</text>
+    <rect x="2" y="104" width="396" height="2" fill="url(#blue)" opacity=".85"/>
+    <text x="3" y="140" fill="#8ea5ba" font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="17" letter-spacing="4">AUTONOMOUS AI OPERATING SYSTEM</text>
+  </g>
+</svg>

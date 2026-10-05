@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION neural field background</title>
+  <desc id="desc">Subtle dark command-center background with neural paths, particles, scanning lines, and restrained blue holographic depth.</desc>
+  <defs>
+    <radialGradient id="ambient" cx="50%" cy="44%" r="72%">
+      <stop offset="0" stop-color="#0b2332"/>
+      <stop offset=".45" stop-color="#07111b"/>
+      <stop offset="1" stop-color="#020408"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#50f4ff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#50f4ff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#50f4ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#ambient)"/>
+  <g stroke="#174058" stroke-width="1" opacity=".45">
+    <path d="M0 160h1920M0 320h1920M0 480h1920M0 640h1920M0 800h1920M0 960h1920"/>
+    <path d="M160 0v1080M320 0v1080M480 0v1080M640 0v1080M800 0v1080M960 0v1080M1120 0v1080M1280 0v1080M1440 0v1080M1600 0v1080M1760 0v1080"/>
+  </g>
+  <g stroke="#2bcfff" stroke-width="1.5" fill="none" opacity=".32">
+    <path d="M91 706c260-146 462-167 608-64 143 101 329 85 557-48 222-129 442-134 660-15"/>
+    <path d="M57 317c224 91 404 97 540 18 150-87 325-91 524-13 197 77 448 64 752-39"/>
+    <path d="M246 923c154-81 294-88 421-19 132 72 299 61 501-34"/>
+  </g>
+  <g fill="#55eaff" opacity=".64">
+    <circle cx="145" cy="704" r="3"/><circle cx="351" cy="627" r="2"/><circle cx="690" cy="647" r="3"/>
+    <circle cx="956" cy="664" r="2"/><circle cx="1247" cy="601" r="3"/><circle cx="1580" cy="539" r="2"/>
+    <circle cx="265" cy="325" r="2"/><circle cx="550" cy="343" r="3"/><circle cx="877" cy="287" r="2"/>
+    <circle cx="1178" cy="333" r="3"/><circle cx="1494" cy="329" r="2"/><circle cx="1784" cy="292" r="3"/>
+  </g>
+  <rect x="0" y="-180" width="1920" height="240" fill="url(#scan)">
+    <animate attributeName="y" values="-180;1080" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <g fill="#8faabe" font-family="DejaVu Sans Mono, monospace" font-size="13" opacity=".18">
+    <text x="96" y="132">COGNITIVE BUS / SIGNAL STABLE / PERCEPTION IDLE</text>
+    <text x="1255" y="914">MEMORY INDEX READY / ACTION GATE LOCKED</text>
+    <text x="708" y="526">JANE.ION::AWARENESS_FIELD</text>
+  </g>
+</svg>

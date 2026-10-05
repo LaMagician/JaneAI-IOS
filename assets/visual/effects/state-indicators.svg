@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">JANE ION state indicators</title>
+  <desc id="desc">Visual indicators for idle, listening, thinking, processing, speaking, executing, success, warning, and startup states.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#75fbff"/>
+      <stop offset=".55" stop-color="#1591ff"/>
+      <stop offset="1" stop-color="#6372ff"/>
+    </linearGradient>
+    <linearGradient id="warn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe17a"/>
+      <stop offset="1" stop-color="#ff7c5f"/>
+    </linearGradient>
+    <linearGradient id="ok" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#78ffe4"/>
+      <stop offset="1" stop-color="#35d883"/>
+    </linearGradient>
+  </defs>
+  <rect width="1500" height="620" fill="#020408"/>
+  <g font-family="Avenir Next, DejaVu Sans, Arial, sans-serif" font-size="22" letter-spacing="3" fill="#9fb6c7">
+    <text x="100" y="108">IDLE</text><text x="375" y="108">LISTENING</text><text x="690" y="108">THINKING</text><text x="1010" y="108">PROCESSING</text>
+    <text x="94" y="383">SPEAKING</text><text x="382" y="383">EXECUTING</text><text x="705" y="383">SUCCESS</text><text x="1018" y="383">WARNING</text>
+  </g>
+  <g fill="none" stroke="url(#blue)" stroke-linecap="round">
+    <circle cx="130" cy="210" r="64" stroke-width="3" opacity=".6"/>
+    <circle cx="130" cy="210" r="38" stroke-width="8" opacity=".85"/>
+    <path d="M373 214c30-70 62-70 94 0s64 70 96 0" stroke-width="8"/>
+    <circle cx="742" cy="210" r="74" stroke-width="4" stroke-dasharray="12 22"/>
+    <circle cx="742" cy="210" r="42" stroke-width="5" stroke-dasharray="46 18"/>
+    <circle cx="1062" cy="210" r="72" stroke-width="8" stroke-dasharray="95 42"/>
+    <circle cx="1062" cy="210" r="44" stroke-width="3" stroke-dasharray="8 14"/>
+    <path d="M100 500c20-64 40-64 60 0s40 64 60 0" stroke-width="7"/>
+    <path d="M371 500h155M449 422v155M396 449l106 106M502 449L396 555" stroke-width="5"/>
+  </g>
+  <g fill="none" stroke="url(#ok)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="742" cy="500" r="70" stroke-width="4"/>
+    <path d="M704 501l28 29 54-66" stroke-width="12"/>
+  </g>
+  <g fill="none" stroke="url(#warn)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1062 425l72 128H990z" stroke-width="5"/>
+    <path d="M1062 465v47M1062 540v2" stroke-width="9"/>
+  </g>
+  <g fill="#54efff">
+    <circle cx="130" cy="210" r="7"/><circle cx="467" cy="214" r="7"/><circle cx="742" cy="210" r="7"/><circle cx="1062" cy="210" r="7"/>
+  </g>
+</svg>

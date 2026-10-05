@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Cognitive loading animation</title>
+  <desc id="desc">Rotating neural ring with electric blue energy pulses for JANE ION loading and thinking states.</desc>
+  <defs>
+    <linearGradient id="blue" x1="110" y1="90" x2="530" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#75fbff"/>
+      <stop offset=".5" stop-color="#1290ff"/>
+      <stop offset="1" stop-color="#6570ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" fill="#020408"/>
+  <circle cx="320" cy="320" r="118" fill="#0a1520"/>
+  <circle cx="320" cy="320" r="88" fill="#102b3b"/>
+  <circle cx="320" cy="320" r="60" fill="#58f4ff" opacity=".72" filter="url(#glow)">
+    <animate attributeName="opacity" values=".45;.9;.45" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <g fill="none" stroke="url(#blue)" stroke-linecap="round">
+    <circle cx="320" cy="320" r="210" stroke-width="8" stroke-dasharray="90 34 18 46">
+      <animateTransform attributeName="transform" type="rotate" from="0 320 320" to="360 320 320" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="320" r="170" stroke-width="3" stroke-dasharray="10 18">
+      <animateTransform attributeName="transform" type="rotate" from="360 320 320" to="0 320 320" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="320" r="255" stroke-width="2" opacity=".45" stroke-dasharray="2 22">
+      <animateTransform attributeName="transform" type="rotate" from="0 320 320" to="360 320 320" dur="18s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g stroke="#64f6ff" stroke-width="2" opacity=".65">
+    <path d="M210 215l80 54 102-76 73 99-92 89 48 118"/>
+    <circle cx="210" cy="215" r="5" fill="#64f6ff"/>
+    <circle cx="290" cy="269" r="5" fill="#64f6ff"/>
+    <circle cx="392" cy="193" r="5" fill="#64f6ff"/>
+    <circle cx="465" cy="292" r="5" fill="#64f6ff"/>
+    <circle cx="373" cy="381" r="5" fill="#64f6ff"/>
+    <circle cx="421" cy="499" r="5" fill="#64f6ff"/>
+  </g>
+</svg>

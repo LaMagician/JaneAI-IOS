@@ -1,0 +1,5 @@
+# id\tversion\tdescription\tpermissions
+system\t1\tInspect kernel, memory, storage, hostname, and running processes\tget_system_information,get_processes,list_files
+files\t1\tRead, write, and search approved filesystem paths\tread_file,write_file,list_files,search_files
+memory\t1\tStore and retrieve user preferences and task context\tread_memory,write_memory
+terminal\t1\tRun the restricted terminal actions exposed by Jane\tlaunch_program
